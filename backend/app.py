@@ -380,10 +380,6 @@ def excluir_tarefa(tarefa_id):
     cursor.close()
     return redirect(url_for('minhastarefas'))
 
-@app.route('/calendario')
-def calendario():
-    return redirect(url_for('calendario'))
-
 
 @app.route("/excluirusuario", methods=['GET', 'POST'])
 
