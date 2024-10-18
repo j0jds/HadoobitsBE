@@ -90,8 +90,6 @@ body {
   }
 }
 
-
-
 /* TELA DE CADASTRO, TELA DE LOGIN */
 
 .access {
@@ -118,6 +116,123 @@ body {
   color: #000000;
 }
 
+/* USUÁRIO ENTROU */
+
+.delete-account {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #800000;
+  padding: 15px;
+  border-radius: 8px;
+  display: block;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.delete-account:hover {
+  background-color: #ff0000;
+}
+
+/* NOVA TAREFA */
+
+.prioridade {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.radio-buttons input[type="radio"] {
+  display: none;
+}
+
+.radio-buttons label {
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.radio-buttons input[type="radio"]:checked+label {
+  background-color: #105c34;
+  color: white;
+  border-color: #105c34;
+}
+
+#mensagem-erro {
+  display: none;
+  background-color: #ffcccc;
+  color: red;
+  margin-bottom: 20px;
+}
+
+#mensagem-erro {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+/* EDITAR TAREFAS */
+
+.tasks {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.task {
+  background-color: #E6E6FA;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.task-info {
+  margin-bottom: 10px;
+}
+
+.task-name {
+  font-size: 20px;
+  color: #333;
+}
+
+.task-priority,
+.task-status {
+  font-size: 16px;
+  color: #666;
+}
+
+.task-actions {
+  text-align: center;
+}
+
+.task-actions button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #105c34;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-actions button:hover {
+  background-color: #1A9654;
+}
+
+/* FLASHES */
+
 .flashes {
   list-style: none;
   padding: 0;
@@ -138,49 +253,6 @@ body {
 .flashes li.excluirusuario_success, .flashes li.login_success {
   background-color: #ccffcc;
   color: #00cc00;
-}
-
-/* TELA DE USUÁRIO ENTROU */
-
-.delete-account {
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #800000;
-  padding: 15px;
-  border-radius: 8px;
-  display: block;
-  transition: background-color 0.3s ease;
-  font-size: 18px;
-}
-
-.delete-account:hover {
-  background-color: #ff0000;
-}
-
-/* ANIMAÇÕES */
-
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(-20px);
-  }
-
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  from {
-      transform: translateY(100%);
-      opacity: 0;
-  }
-
-  to {
-      transform: translateY(0);
-      opacity: 1;
-  }
 }
 
 /* RESPONSIVIDADE */
@@ -240,107 +312,28 @@ body {
   }
 }
 
-/*  */
+/* ANIMAÇÕES */
 
-.prioridade {
-  text-align: center;
-  padding-bottom: 10px;
-  padding-top: 10px;
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
-.radio-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  align-items: center;
-  padding-top: 10px;
+@keyframes slideUp {
+  from {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
 }
-
-.radio-buttons input[type="radio"] {
-  display: none;
-}
-
-.radio-buttons label {
-  font-size: 16px;
-  cursor: pointer;
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  user-select: none;
-}
-
-.radio-buttons input[type="radio"]:checked+label {
-  background-color: #105c34;
-  color: white;
-  border-color: #105c34;
-}
-
-#mensagem-erro {
-  display: none;
-  background-color: #ffcccc;
-  color: red;
-  margin-bottom: 20px;
-}
-
-#mensagem-erro {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.flashes li.tarefa_error {
-  background-color: #ffcccc;
-  color: #ff0000;
-}
-
-/*  */
-
-.tasks {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.task {
-  background-color: #E6E6FA;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;
-}
-
-.task-info {
-  margin-bottom: 10px;
-}
-
-.task-name {
-  font-size: 20px;
-  color: #333;
-}
-
-.task-priority,
-.task-status {
-  font-size: 16px;
-  color: #666;
-}
-
-.task-actions {
-  text-align: center;
-}
-
-.task-actions button {
-  margin: 5px;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  background-color: #105c34;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.task-actions button:hover {
-  background-color: #1A9654;
-}
-
-/*  */
