@@ -11,6 +11,8 @@ app.config['SECRET_KEY'] = 'cookiesecreto'
 login_manager = LoginManager()
 login_manager.init_app(app)
 
+# --------------------------------------------------- #
+
 fake = Faker()
 
 patterns = {
@@ -191,6 +193,8 @@ def close_connection(exception):
     db = getattr(g, '_database', None)
     if db is not None:
         db.close()
+        
+# --------------------------------------------------- #
 
 def generate_task_title():
     pattern = random.choice(list(patterns.keys()))
@@ -212,10 +216,8 @@ def insert_fake_tasks(batch_size, total_records):
             cursor.executemany('INSERT INTO tarefa (nome, descricao, prioridade, usuario_id) VALUES (?, ?, ?, ?)', data_batch)
             db.commit()
         cursor.close()
-        flash(f'{total_records} tarefas inseridas com sucesso!', 'success')
     except sqlite3.Error as e:
         print(f"Erro no banco de dados: {e}")
-        flash('Erro ao injetar tarefas no banco de dados.', 'error')
 
 def insert_fake_users(batch_size, total_records):
     try:
@@ -235,7 +237,6 @@ def insert_fake_users(batch_size, total_records):
             cursor.executemany('INSERT INTO membros (nome, email, senha) VALUES (?, ?, ?)', data_batch)
             db.commit()
         cursor.close()
-        flash(f'{total_records} usuários inseridos com sucesso!', 'success')
     except sqlite3.IntegrityError as e:
         print(f"Erro de integridade: {e}")
         flash('Erro ao injetar dados: violação de integridade.', 'error')
@@ -245,7 +246,6 @@ def injetar_dados():
     total_records = 100000
     batch_size = 1000
     insert_fake_users(batch_size, total_records)
-    flash(f'{total_records} usuários inseridos com sucesso!', 'success')
     return redirect(url_for('home'))
 
 @app.route("/inserir_tarefas", methods=['POST'])
@@ -255,6 +255,8 @@ def inserir_tarefas():
     batch_size = 1000
     insert_fake_tasks(batch_size, total_tarefas)
     return redirect(url_for('minhastarefas'))
+
+# --------------------------------------------------- #
 
 @app.route("/")
 def home():
@@ -370,7 +372,7 @@ def editartarefas(tarefa_id):
         else:
             return redirect(url_for('minhastarefas'))
 
-@app.route("/excluir_tarefa/<int:tarefa_id>")
+@app.route("/excluir_tarefa/<int:tarefa_id>", methods=['POST'])  
 @login_required
 def excluir_tarefa(tarefa_id):
     db = get_db()
@@ -378,6 +380,7 @@ def excluir_tarefa(tarefa_id):
     cursor.execute('DELETE FROM tarefa WHERE id = ? AND usuario_id = ?', (tarefa_id, current_user.id))
     db.commit()
     cursor.close()
+    flash('Tarefa excluída com sucesso.', 'tarefa_excluida')  
     return redirect(url_for('minhastarefas'))
 
 
