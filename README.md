@@ -1,37 +1,26 @@
-# Projeto Big Data: Acompanhamento dos Casos de Enchente em Recife
-Este projeto tem como objetivo monitorar e prever possíveis enchentes na cidade de Recife através de análise e visualização de dados. 
+# Big Data Project: Monitoring Habits
+This project aims to monitor habits through data analysis and visualization.
 
-## Tecnologias Utilizadas
+## Technologies Used
 Back-end
-- Python: Linguagem principal para o processamento de dados. 
-- Pandas: Para limpeza e manipulação de dados.
-- NumPy: Para operações matemáticas e manipulação de matrizes.
-- PySpark: (Se aplicável) Para processamento de grandes volumes de dados.
-- Flask: Framework web para construção do back-end e APIs.
+- Python: Main language for data processing.
+- Pandas: For data cleaning and manipulation.
+- NumPy: For mathematical operations and array manipulation.
+- PySpark: (If applicable) For processing large volumes of data.
+- Flask: Web framework for building the back-end and APIs.
 
-## Front-end
-- HTML5: Estrutura da interface do usuário.
-- CSS3: Estilização da interface.
-- JavaScript: Para manipulação de elementos dinâmicos na página.
+Front-end
+- HTML5: Structure of the user interface.
+- CSS3: Styling the interface.
+- JavaScript: For manipulating dynamic elements on the page.
 
-## Pré-requisitos
+## Prerequisites
 - Python 3.x
-- Pacotes Python: Pandas, NumPy, Flask
+- Python packages: Pandas, NumPy, Flask
 
-## Funcionalidades
-- Previsão de Enchentes: Baseado em dados meteorológicos e históricos.
-- Visualização Interativa: Gráficos e mapas das áreas de risco.
-
-## Contribuição
-- Faça um fork do projeto.
-- Crie uma branch para a sua feature (git checkout -b feature-nome).
-- Faça commit das suas mudanças (git commit -m 'Adiciona nova feature').
-- Faça o push para a branch (git push origin feature-nome).
-- Abra um Pull Request.
-
-Footer
-© 2024 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
+## Contribution
+- Fork the project.
+- Create a branch for your feature (git checkout -b feature-name).
+- Commit your changes (git commit -m 'Add new feature').
+- Push to the branch (git push origin feature-name).
+- Open a Pull Request.
