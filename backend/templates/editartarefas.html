@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Tarefa</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/editartarefas.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 
 <body>
-    <div class="container">
-        <h2>Editar Tarefa</h2>
+    <div class="card">
+        
+        <h2 class="title">Editar Tarefa</h2>
+
         <form method="POST">
-            <input type="text" name="nome" value="{{ tarefa[1] }}" placeholder="Nome da Tarefa" required>
-            <input type="text" name="descricao" value="{{ tarefa[2] }}" placeholder="Descrição da Tarefa" required>
+            
+            <input class="input" type="text" name="nome" value="{{ tarefa[1] }}" placeholder="Nome da Tarefa" required>
+            <input class="input" type="text" name="descricao" value="{{ tarefa[2] }}" placeholder="Descrição da Tarefa" required>
+
             <div class="prioridade">
                 <p>Prioridade da Tarefa</p>
                 <div class="radio-buttons">
@@ -30,10 +34,10 @@
                     <label for="baixa">Baixa</label>
                 </div>
             </div>
-            <button type="submit" class="btn-salvar">Salvar Tarefa</button>
-            <nav>
-                <ul>
-                    <li><a href="{{ url_for('minhastarefas') }}">Cancelar</a></li>
+            <button type="submit" class="button_function">Salvar Tarefa</button>
+            <nav class="navigation">
+                <ul class="list">
+                    <li class="list__element"><a class="button" href="{{ url_for('minhastarefas') }}">Cancelar</a></li>
                 </ul>
             </nav>
         </form>
