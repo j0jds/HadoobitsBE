@@ -14,13 +14,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #1A9654, #C7E9D6);
+    background: linear-gradient(135deg, #1E71b7, #c7dbe9);
     overflow: scroll;
 }
 
 .container {
     align-self: center;
-    background-color: #c7e9cd;
+    background-color: #c7dbe9;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -35,7 +35,7 @@ body {
 
 .container h2 {
     margin-bottom: 20px;
-    color: #003117;
+    color: #021431;
     font-size: 24px;
 }
 
@@ -76,14 +76,14 @@ body {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #105c34;
+    background-color: #0a66c2;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .task-actions button:hover {
-    background-color: #1A9654;
+    background-color:#0e74d8;
 }
 
 .btn-adicionar {
@@ -92,7 +92,7 @@ body {
     margin-top: 20px;
     border: none;
     border-radius: 10px;
-    background-color: #105c34;
+    background-color: #0a66c2;
     color: white;
     font-size: 18px;
     cursor: pointer;
@@ -100,7 +100,7 @@ body {
 }
 
 .btn-adicionar:hover {
-    background-color: #1A9654;
+    background-color: #0e74d8;
 }
 
 .btn-voltar {
@@ -110,7 +110,7 @@ body {
     margin-top: 20px;
     border: none;
     border-radius: 10px;
-    background-color: #105c34;
+    background-color:  #0a66c2;
     color: white;
     font-size: 18px;
     cursor: pointer;
@@ -119,7 +119,7 @@ body {
 }
 
 .btn-voltar:hover {
-    background-color: #1A9654;
+    background-color:  #0e74d8;
 }
 
 @keyframes fadeIn {
@@ -152,7 +152,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    background-color: #105c34;
+    background-color: #0a66c2;
     padding: 15px;
     border-radius: 10px;
     display: block;
@@ -161,7 +161,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #1A9654;
+    background-color: #0e74d8;
 }
 
 .flashes {
