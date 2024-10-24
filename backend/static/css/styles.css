@@ -214,24 +214,24 @@ body {
 }
 
 .task-actions {
-  display: flex; /* Utiliza flexbox para alinhar os botões */
-  justify-content: center; /* Centraliza os botões */
-  gap: 10px; /* Adiciona espaço entre os botões */
-  padding: 10px 0; /* Adiciona um pouco de espaço ao redor dos botões */
+  display: flex; 
+  justify-content: center; 
+  gap: 10px; 
+  padding: 10px 0; 
 }
 
 .btn-descicao, .btn-editar, .btn-excluir {
-  display: inline-block; /* Para garantir que os botões fiquem em linha */
-  padding: 10px 20px; /* Ajusta o preenchimento dentro dos botões */
-  background-color: #007bff; /* Cor de fundo do botão */
-  color: white; /* Cor do texto */
-  border: none; /* Remove as bordas padrão */
-  border-radius: 5px; /* Bordas arredondadas */
-  cursor: pointer; /* Mudança de cursor ao passar o mouse */
+  display: inline-block; 
+  padding: 10px 20px; 
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
 }
 
 .btn-descicao:hover, .btn-editar:hover, .btn-excluir:hover {
-  background-color: #0056b3; /* Cor ao passar o mouse */
+  background-color: #0056b3; 
 }
 
 .task-actions button:hover {
